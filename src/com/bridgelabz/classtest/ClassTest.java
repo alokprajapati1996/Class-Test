@@ -17,7 +17,25 @@ public class ClassTest {
 
 
     }
-    public static void stopWatchProgram(){
+
+    public static void calculateMinimumNotes(){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter amount");
+        int amount=sc.nextInt();
+        int notes[] = { 1000, 500, 100, 50, 10, 5, 2, 1 };
+        int noteFreq []=new int[notes.length];
+        int counter=0;
+        for (int i = 0; i < 8; i++) {
+            if (amount >= notes[i]) {
+                noteFreq[i] = amount / notes[i];
+                amount = amount - noteFreq[i] * notes[i];
+                counter++;
+            }
+        }
+        System.out.println("notes count:"+counter);
+
+            }
+            public static void stopWatchProgram(){
         int counter=1;
         for(int i=1;i<=10;i++){
             System.out.println(i);
@@ -30,5 +48,6 @@ public class ClassTest {
 
      coupanNumber();
      stopWatchProgram();
+     calculateMinimumNotes();
     }
 }
