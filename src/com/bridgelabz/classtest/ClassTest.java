@@ -16,9 +16,18 @@ public class ClassTest {
         }
 
     }
+    public static void stopWatchProgram(){
+        int counter=1;
+        for(int i=1;i<=10;i++){
+            System.out.println(i);
+            counter++;
+        }
+        System.out.println("elapsed time "+counter);
+    }
     public static void main(String[] args) {
         System.out.println("class test");
 
      coupanNumber();
+     stopWatchProgram();
     }
 }
